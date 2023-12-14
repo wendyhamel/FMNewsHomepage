@@ -13,7 +13,8 @@ tailwind.config = {
 				'dark-blue': 'hsl(240, 100%, 5%)',
 			},
 			fontSize: {
-				'4.5xl': ['2.5rem', { lineHeight: '2.5rem'}]
+				'4.5xl': ['2.5rem', { lineHeight: '2.5rem'}],
+				'5.5xl': ['3.25rem', { lineHeight: '3.25rem'}]
 			},
 		}
 	}

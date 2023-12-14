@@ -22,11 +22,11 @@
   <script src="./src/tailwind.config.js"></script>
 
 </head>
-<body>
-  <header class="flex justify-between gap-6 items-center px-4 py-5 mb-2">
+<body class="min-h-[100dvh] grid place-content-center max-w-[1090px] mx-auto">
+  <header class="flex justify-between gap-6 items-center px-4 py-5 mb-2 lg:py-10">
     <div>
       <svg
-          class="w-12 text-dark-blue"
+          class="w-12 text-dark-blue md:w-16"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 65 40"
       >
@@ -34,12 +34,12 @@
       </svg>
     </div>
     <nav>
-      <ul class="hidden sm:block sm:flex sm:items-center sm:gap-4">
-        <li><a href="#" class="hover:text-orange transition ease-in-out duration-150">Home</a></li>
-        <li><a href="#" class="hover:text-orange transition ease-in-out duration-150">New</a></li>
-        <li><a href="#" class="hover:text-orange transition ease-in-out duration-150">Popular</a></li>
-        <li><a href="#" class="hover:text-orange transition ease-in-out duration-150">Trending</a></li>
-        <li><a href="#" class="hover:text-orange transition ease-in-out duration-150">Categories</a></li>
+      <ul class="hidden sm:block sm:flex sm:items-center sm:gap-10">
+        <li><a href="#" class="text-gray-blue hover:text-orange transition ease-in-out duration-150">Home</a></li>
+        <li><a href="#" class="text-gray-blue hover:text-orange transition ease-in-out duration-150">New</a></li>
+        <li><a href="#" class="text-gray-blue hover:text-orange transition ease-in-out duration-150">Popular</a></li>
+        <li><a href="#" class="text-gray-blue hover:text-orange transition ease-in-out duration-150">Trending</a></li>
+        <li><a href="#" class="text-gray-blue hover:text-orange transition ease-in-out duration-150">Categories</a></li>
       </ul>
       <div class=" sm:hidden" x-data="{ menuOpened: false }">
         <button
@@ -134,66 +134,70 @@
       </div>
     </nav>
   </header>
-  <main class="grid gap-16 px-4 pb-20">
-    <section>
+  <main class="grid gap-16 px-4 pb-20 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-[70px] md:grid-cols-5 lg:grid-cols-3">
+    <section class="md:col-span-3 lg:col-span-2">
       <div>
         <img class="hidden sm:block" src="assets/images/image-web-3-desktop.jpg" alt="web 3 image">
         <img class="sm:hidden" src="assets/images/image-web-3-mobile.jpg" alt="web 3 image">
       </div>
-      <div class="pt-7 space-y-4">
-        <h1 class="text-4.5xl font-extrabold">The Bright <br/> Future of Web <br/> 3.0?</h1>
-        <p class="text-gray-blue leading-relaxed pb-2">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.
+      <div class="grid gap-4 pt-7 lg:grid-cols-2">
+        <div class="grid place-content-center lg:row-span-2">
+          <h1 class="text-4.5xl font-extrabold lg:text-5.5xl">The Bright Future of Web 3.0?</h1>
+        </div>
+        <p class="text-gray-blue leading-relaxed pb-2 lg:text-sm">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.
           But is it really fulfilling its promise?</p>
-        <button class="text-sm font-bold uppercase tracking-[0.3em] text-white bg-red py-3.5 px-8 hover:bg-dark-blue transition ease-in-out duration-150">Read more</button>
+        <div class="md:col-start-2 lg:row-start-2">
+          <button class="text-sm font-bold uppercase tracking-[0.3em] text-white bg-red py-3.5 px-8 hover:bg-dark-blue transition ease-in-out duration-150">Read more</button>
+        </div>
       </div>
     </section>
-    <section class="bg-dark-blue text-white p-5">
-      <h2 class="text-orange font-bold text-3xl">New</h2>
+    <section class="bg-dark-blue text-white p-5 md:col-span-2 lg:p-6 lg:pt-8 lg:col-span-1">
+      <h2 class="text-orange font-bold text-3xl lg:text-4.5xl">New</h2>
       <ul class="divide-y divide-gray">
-        <li class="space-y-2 pt-7 pb-6">
+        <li class="space-y-2 pt-7 pb-6 lg:pe-3">
           <h3 class="text-lg font-bold"><a href="#" class="hover:text-orange transition ease-in-out duration-150">Hydrogen VS Electric Cars</a></h3>
-          <p class="text-sm text-gray">Will hydrogen-fueled cars ever catch up to EVs?</p>
+          <p class="text-sm text-gray lg:leading-7">Will hydrogen-fueled cars ever catch up to EVs?</p>
         </li>
-        <li class="space-y-2 pt-7 pb-6">
+        <li class="space-y-2 pt-7 pb-6 lg:pe-3">
           <h3 class="text-lg font-bold"><a href="#" class="hover:text-orange transition ease-in-out duration-150">The Downsides of AI Artistry</a></h3>
-          <p class="text-sm text-gray">What are the possible adverse effects of on-demand AI image generation?</p>
+          <p class="text-sm text-gray lg:leading-7">What are the possible adverse effects of on-demand AI image generation?</p>
         </li>
-        <li class="space-y-2 pt-7 pb-6">
+        <li class="space-y-2 pt-7 lg:pe-3">
           <h3 class="text-lg font-bold"><a href="#" class="hover:text-orange transition ease-in-out duration-150">Is VC Funding Drying Up?</a></h3>
-          <p class="text-sm text-gray">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+          <p class="text-sm text-gray lg:leading-7">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
         </li>
       </ul>
     </section>
-    <section>
-      <ul class="space-y-8">
+    <section class="col-span-full lg:pb-2">
+      <ul class="grid gap-8 lg:grid-cols-3">
         <li class="flex gap-6">
-          <div class="w-[100px] overflow-hidden aspect-[3/4] shrink-0">
-            <img class="w-full h-full object-cover" src="assets/images/image-retro-pcs.jpg" alt="retro pcs">
+          <div class="shrink-0 grow-0">
+            <img class="w-[100px] h-[130px]" src="assets/images/image-retro-pcs.jpg" alt="retro pcs">
           </div>
           <div class="space-y-2">
             <span class="text-3xl text-gray font-bold">01</span>
             <h3 class="font-bold"><a href="#" class="hover:text-red transition ease-in-out duration-150">Reviving Retro PCs</a></h3>
-            <p class="text-gray-blue">What happens when old PCs are given modern upgrades?</p>
+            <p class="text-gray-blue lg:text-sm lg:leading-7">What happens when old PCs are given modern upgrades?</p>
           </div>
         </li>
         <li class="flex gap-6">
-          <div class="w-[100px] overflow-hidden aspect-[3/4] shrink-0">
-            <img class="w-full h-full object-cover" src="assets/images/image-top-laptops.jpg" alt="top laptops">
+          <div class="shrink-0 grow-0">
+            <img class="w-[100px] h-[130px]" src="assets/images/image-top-laptops.jpg" alt="top laptops">
           </div>
           <div class="space-y-2">
             <span class="text-3xl text-gray font-bold">02</span>
             <h3 class="font-bold"><a href="#" class="hover:text-red transition ease-in-out duration-150">Top 10 Laptops of 2022</a></h3>
-            <p class="text-gray-blue">Our best picks for various needs and budgets.</p>
+            <p class="text-gray-blue lg:text-sm lg:leading-7">Our best picks for various needs and budgets.</p>
           </div>
         </li>
         <li class="flex gap-6">
-          <div class="w-[100px] overflow-hidden aspect-[3/4] shrink-0">
-            <img class="w-full h-full object-cover" src="assets/images/image-gaming-growth.jpg" alt="gaming growth">
+          <div class="shrink-0 grow-0">
+            <img class="w-[100px] h-[130px]" src="assets/images/image-gaming-growth.jpg" alt="gaming growth">
           </div>
           <div class="space-y-2">
             <span class="text-3xl text-gray font-bold">03</span>
             <h3 class="font-bold"><a href="#" class="hover:text-red transition ease-in-out duration-150">The Growth of Gaming</a></h3>
-            <p class="text-gray-blue">How the pandemic has sparked fresh opportunities.</p>
+            <p class="text-gray-blue lg:text-sm lg:leading-7">How the pandemic has sparked fresh opportunities.</p>
           </div>
         </li>
       </ul>
